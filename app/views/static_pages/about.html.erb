@@ -1,2 +1,17 @@
 <h1>Static_pages#about</h1>
 <p>Find me in app/views/static_pages/about.html.erb</p>
+
+<% if @elevation %>
+  <h2>Elevation</h2>
+  <p>In meters: <%= @elevation['elevation'] %></p>
+  <p>In feet: <%= @elevation['elevation_feet'] %></p>
+<% end %>
+
+<% if @ip_info %>
+  <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=<%= @ip_info['latitude'] %>&lon=<%= @ip_info['longitude'] %>&name=<%= @ip_info['city'] %>"> </iframe>
+
+  <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @ip_info['latitude'] %>,<%= @ip_info['longitude'] %>&zoom=13&size=600x600&sensor=false">
+
+  <img src="http://maps.googleapis.com/maps/api/streetview?size=600x600&location=<%= @ip_info['latitude'] %>,<%= @ip_info['longitude'] %>&heading=235&sensor=false">
+<% end %>
+

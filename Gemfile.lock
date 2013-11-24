@@ -84,6 +84,7 @@ GEM
       bundler (~> 1.0)
       rails (>= 3, < 5)
     formatador (0.2.4)
+    gmaps4rails (2.0.5)
     guard (2.2.3)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -203,6 +204,7 @@ GEM
     uglifier (2.3.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.5.2)
     unicorn (4.7.0)
       kgio (~> 2.6)
       rack
@@ -225,6 +227,7 @@ DEPENDENCIES
   factory_girl_rails (>= 4.2.0)
   ffaker
   figaro
+  gmaps4rails
   guard
   guard-livereload
   guard-minitest
@@ -244,5 +247,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   simple_form
   uglifier (>= 1.0.3)
+  underscore-rails
   unicorn
   xray-rails

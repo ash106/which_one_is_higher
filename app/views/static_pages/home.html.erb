@@ -1,2 +1,28 @@
-<h1>Static_pages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+
+<h1><small>Answer the age old question: </small>Who Is Higher?</h1>
+
+<div id="map_canvas">
+</div>
+
+<br />
+
+<%= minimal_form_for :compare do |f| %>
+  <%= f.input :location_one %>
+  <%= f.input :location_two %>
+  <br />
+  <%= f.button :submit, "Compare", class: "btn btn-primary" %>
+<% end %>
+
+<!-- <div class="row">
+  <div id="loc_one" class="col-md-6" >
+    <input id="address_one" type="textbox" value="Salt Lake City, UT">
+    <input id="loc_one_button" type="submit" value="Set First Location">
+  </div>
+
+  <div id="loc_two" class="col-md-6" >
+    <input id="address_two" type="textbox" value="Vicksburg, MS">
+    <input id="loc_two_button" type="submit" value="Set Second Location">
+  </div>
+</div> -->
+
+
