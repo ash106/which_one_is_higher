@@ -1,7 +1,7 @@
 
 <h1><small>Answer the age old question: </small>Who Is Higher?</h1>
 
-<div id="map_canvas">
+<div id="winner" class="alert alert-success">
 </div>
 
 <br />
@@ -10,8 +10,11 @@
   <%= f.input :location_one %>
   <%= f.input :location_two %>
   <br />
-  <%= f.button :submit, "Compare", class: "btn btn-primary" %>
+  <%= f.button :submit, "Compare Elevations", class: "btn btn-primary compare_button" %>
 <% end %>
+
+<div id="map_canvas">
+</div>
 
 <!-- <div class="row">
   <div id="loc_one" class="col-md-6" >

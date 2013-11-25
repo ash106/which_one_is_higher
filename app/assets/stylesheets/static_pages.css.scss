@@ -1,4 +1,28 @@
 #map_canvas {
-  margin-top: 40px;
-  height: 500px;
+  margin-top: 30px;
+  height: 420px;
+}
+
+#winner {
+  margin-top: 10px;
+  font-size: 18px;
+  @include make-row();
+  @include make-md-column(6);
+  @include make-md-column-offset(3);
+  display: none;
+  text-align: center;
+}
+
+.compare {
+  margin-top: 10px;
+  @include make-row();
+}
+
+.compare_location_one, .compare_location_two {
+  @include make-md-column(6);
+}
+
+.compare_button {
+  @include make-md-column(4);
+  @include make-md-column-offset(4);
 }
