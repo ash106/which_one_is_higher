@@ -48,8 +48,8 @@ $ ->
     elevator.getElevationForLocations positionalRequest, (results, status) ->
       if status is google.maps.ElevationStatus.OK
         if results[0]
-          elevation_results[order] = Math.round(results[0].elevation)
-          info_windows[order].setContent elevation_results[order] + " meters"
+          elevation_results[order] = Math.round(results[0].elevation * 3.280839895)
+          info_windows[order].setContent elevation_results[order] + " ft"
           info_windows[order].open map, locations[order]
           isFinished.push("yes")
           console.debug(isFinished)
@@ -64,11 +64,11 @@ $ ->
 
   compareElevations = ->
     if elevation_results[0] > elevation_results[1]
-      info_windows[0].setContent info_windows[0].getContent() + "\nWINNER"
+      info_windows[0].setContent "<h6>WINNER</h6>\n" + info_windows[0].getContent()
       $('#winner').html '<p>' + $("#compare_location_one").val() + ' is the winner!</p>'
       $('#winner').show()
     else
-      info_windows[1].setContent info_windows[1].getContent() + "\nWINNER"
+      info_windows[1].setContent "<h6>WINNER</h6>\n" + info_windows[1].getContent()
       $('#winner').html '<p>' + $("#compare_location_two").val() + ' is the winner!</p>'
       $('#winner').show()
     setBounds()

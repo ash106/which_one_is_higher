@@ -1,5 +1,5 @@
 #map_canvas {
-  margin-top: 30px;
+  margin-top: 20px;
   height: 420px;
 }
 
@@ -19,10 +19,22 @@
 }
 
 .compare_location_one, .compare_location_two {
-  @include make-md-column(6);
+  @include make-md-column(3);
+}
+
+.compare_location_one {
+  @include make-md-column-offset(3);
 }
 
 .compare_button {
   @include make-md-column(4);
   @include make-md-column-offset(4);
 }
+
+footer {
+  margin-top: 70px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-top: 1px solid #cdd6d1;
+}
+
