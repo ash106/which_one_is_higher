@@ -82,3 +82,9 @@ $ ->
     codeAddress $("#compare_location_two").val(), 1
     return false
 
+  google.maps.event.addListener locations[0], "click", ->
+    info_windows[0].open map, locations[0]
+
+  google.maps.event.addListener locations[1], "click", ->
+    info_windows[1].open map, locations[1]
+
