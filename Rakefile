@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WhoIsHigher::Application.load_tasks
+WhichOneIsHigher::Application.load_tasks

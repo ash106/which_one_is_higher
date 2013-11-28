@@ -1,4 +1,4 @@
-WhoIsHigher::Application.routes.draw do
+WhichOneIsHigher::Application.routes.draw do
 
   devise_for :users
   

@@ -19,6 +19,7 @@ gem 'figaro'
 gem 'pg'
 gem 'simple_form'
 gem 'unicorn'
+gem 'rename'
 
 group :development do
   gem 'powder'
