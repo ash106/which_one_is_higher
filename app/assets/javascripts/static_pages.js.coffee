@@ -16,6 +16,8 @@ $ ->
     position: vicksburg_pos,
     map: map
   )
+  slc.setVisible(false);
+  vicksburg.setVisible(false);
   locations = [slc, vicksburg]
   info_window_one = new google.maps.InfoWindow(maxWidth: 100)
   info_window_two = new google.maps.InfoWindow(maxWidth: 100)
@@ -48,6 +50,7 @@ $ ->
     elevator.getElevationForLocations positionalRequest, (results, status) ->
       if status is google.maps.ElevationStatus.OK
         if results[0]
+          locations[order].setVisible(true);
           elevation_results[order] = Math.round(results[0].elevation * 3.280839895)
           info_windows[order].setContent elevation_results[order] + " ft"
           info_windows[order].open map, locations[order]
